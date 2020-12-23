@@ -1,0 +1,9 @@
+<h1>Search results</h1>
+<div class="search-summary">{{ foundCount }} Results</div>
+<div class="search-result" *ngFor="let link of searchResults">
+  <h3><a href="{{ link.path }}">{{ link.title }}</a></h3>
+  <p>{{ link.preview }} <span class="page-rank" title="Page rank">{{ link.pageRank }}%</span></p>
+</div>
+<div class="footer">
+  This site is powered by Vocula app.
+</div>

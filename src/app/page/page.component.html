@@ -1,0 +1,10 @@
+<ul class="breadcrumb">
+  <li *ngFor="let link of pageData.breadcrumb">
+    <a href="{{link.path}}">{{link.title}}</a>
+  </li>
+  <li>{{ pageData.title }}</li>
+</ul>
+<div [innerHTML]="pageData.body"></div>
+<div class="footer">
+  This site is powered by Vocula app.
+</div>

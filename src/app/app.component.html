@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="navigation">
+    <div class="logo">Vocula</div>
+    <nav>
+      <div>
+        <input type="checkbox" class="hamburger" name="hamburger" id="hamburger"/>
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <div class="search">
+          <input #searchBox type="text" (keydown.enter)="SearchHandler(searchBox.value)">
+        </div>
+        <ul>
+          <li><a href="/">Home page</a></li>
+          <li *ngFor="let link of subLinks | async"><a href="{{link.path}}"><bdi>{{link.title}}</bdi></a></li>
+        </ul>
+      </div>
+    </nav>    
+  </div>
+  <div class="content" id="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
